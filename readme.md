@@ -8,7 +8,7 @@ de jogos utilizando a Godot 3.0 (que atualmente encontra-se em versão alfa).
 O recursos aqui apresentados são de uso livre, assim como a própria Godot.
 Isso não quer dizer que nós da [GameDev Society](www.facebook.com/gdsufrgs),
 que desenvolvemos esse material com tanto carinho, não mereçam agradecimentos
-ou uma menção no jogo que fizer uso dos recursos disponiblizados aqui.
+ou uma menção no jogo que fizer uso dos recursos disponibilizados aqui.
 
 ### Documentação
 
