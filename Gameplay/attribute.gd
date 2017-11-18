@@ -3,14 +3,17 @@ extends Node
 signal changed_value
 signal changed_max
 
+export(float) var base  = 100.0 setget set_base
 export(float) var max_base  = 100.0
-export(float) var max_value = 200.0 setget set_maxvalue
 
-export(float) var base  = 0.0 setget set_base
 export(float) var bonus = 0.0 setget set_bonus
 export(float) var mult  = 1.0 setget set_mult
+export(float) var max_value = 200.0 setget set_maxvalue
 
 var value = 0.0 setget , get_value
+
+func _ready():
+	print(str(base))
 
 func set_maxvalue(v):
 	var prev = get_value()
@@ -31,17 +34,18 @@ func set_base(v):
 		emit_signal("changed_value")
 
 func set_bonus(v):
-	var prev = bonus
+	var prev = get_value()
 	bonus = max(0, v)
-	if bonus != prev:
+	if prev != get_value():
 		emit_signal("changed_value")
 
 func set_mult(v):
-	var prev = mult
+	var prev = get_value()
 	mult = max(0, v)
-	if mult != prev:
+	if prev != get_value():
 		emit_signal("changed_value")
 
 func get_value():
 	value = clamp(base * mult + bonus, 0, max_value)
 	return value
+
