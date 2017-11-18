@@ -12,9 +12,6 @@ export(float) var max_value = 200.0 setget set_maxvalue
 
 var value = 0.0 setget , get_value
 
-func _ready():
-	print(str(base))
-
 func set_maxvalue(v):
 	var prev = get_value()
 
